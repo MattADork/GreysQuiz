@@ -1,5 +1,5 @@
 function finalAnswer() {
-  let finalValues = questionThree();
+  let finalValues = questionFour();
   if (finalValues[0] > finalValues[1] && finalValues[0] > finalValues[2] && finalValues[0] > finalValues[3] && finalValues[0] > finalValues[4]) {
     alert("You are Alex Karev! Congratulations!");
   } else if (finalValues[1] > finalValues[0] && finalValues[1] > finalValues[2] && finalValues[1] > finalValues[3] && finalValues[1] > finalValues[4]) {
@@ -11,6 +11,44 @@ function finalAnswer() {
   } else if (finalValues[4] > finalValues[1] && finalValues[4] > finalValues[2] && finalValues[4] > finalValues[3] && finalValues[4] > finalValues[0]) {
     alert ("You are Cristina Yang! Congratulations!");
   }
+}
+
+function questionFour() {
+  let q3Values = questionThree();
+  console.log("How do you de-stress?");
+  console.log("a) Dancing");
+  console.log("b) Fucking");
+  console.log("c) Eating");
+  console.log("d) Drinking");
+  choiceFour = prompt("a/b/c/d: ?").toLowerCase();
+  if (choiceFour === "a") {
+    q3Values[0] -= 2;
+    q3Values[1] -= 2;
+    q3Values[2] += 0;
+    q3Values[3] += 1;
+    q3Values[4] += 2;
+  } else if (choiceFour === "b") {
+    q3Values[0] += 2;
+    q3Values[1] += 0;
+    q3Values[2] -= 1;
+    q3Values[3] += 2;
+    q3Values[4] += 2;
+  } else if (choiceFour === "c") {
+    q3Values[0] += 0;
+    q3Values[1] += 1;
+    q3Values[2] += 2;
+    q3Values[3] -= 2;
+    q3Values[4] -= 2;
+  } else if (choiceFour === "d") {
+    q3Values[0] += 1;
+    q3Values[1] += 2;
+    q3Values[2] += 0;
+    q3Values[3] += 2;
+    q3Values[4] += 1;
+  }
+  q4Values = [q3Values[0], q3Values[1], q3Values[2], q3Values[3], q3Values[4]];
+  console.log(`You chose ${choiceFour}`);
+  return q4Values;
 }
 
 function questionThree() {
