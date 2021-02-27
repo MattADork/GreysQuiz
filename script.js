@@ -1,5 +1,6 @@
 function finalAnswer() {
-  let finalValues = questionSix();
+  let finalValues = questionSeven();
+  console.log(finalValues);
   if (finalValues[0] > finalValues[1] && finalValues[0] > finalValues[2] && finalValues[0] > finalValues[3] && finalValues[0] > finalValues[4]) {
     console.log("You are Alex Karev! Congratulations!");
     alert ("You are Alex Karev! Congratulations!");
@@ -19,6 +20,44 @@ function finalAnswer() {
     console.log("We couldn't decide... You share traits with all of them! Try again!");
     alert ("We couldn't decide... You share traits with all of them! Try again!");
   }
+}
+
+function questionSeven() {
+  let q6Values = questionSix();
+  console.log("Do moms like you?");
+  console.log("a) Always.");
+  console.log("b) I can put on a good song and dance.");
+  console.log("c) I try to avoid parents.");
+  console.log("d) Parents tend to dislike me on first impression");
+  choiceSeven = prompt("a/b/c/d: ?").toLowerCase();
+  if (choiceSeven === "a") {
+    q6Values[0] -= 2;
+    q6Values[1] += 2;
+    q6Values[2] += 2;
+    q6Values[3] -= 2;
+    q6Values[4] -= 2;
+  } else if (choiceSeven === "b") {
+    q6Values[0] += 1;
+    q6Values[1] += 2;
+    q6Values[2] += 1;
+    q6Values[3] += 1;
+    q6Values[4] += 0;
+  } else if (choiceSeven === "c") {
+    q6Values[0] += 0;
+    q6Values[1] -= 1;
+    q6Values[2] -= 2;
+    q6Values[3] += 1;
+    q6Values[4] += 2;
+  } else if (choiceSeven === "d") {
+    q6Values[0] += 1;
+    q6Values[1] -= 2;
+    q6Values[2] -= 2;
+    q6Values[3] += 1;
+    q6Values[4] += 2;
+  }
+  q7Values = [q6Values[0], q6Values[1], q6Values[2], q6Values[3], q6Values[4]];
+  console.log(`You chose ${choiceSeven}`);
+  return q7Values;
 }
 
 function questionSix() {
@@ -144,13 +183,13 @@ function questionThree() {
   console.log("d) I\'d rather be in surgery!");
   choiceThree = prompt("a/b/c/d: ?").toLowerCase();
   if (choiceThree === "a") {
-    q2Values[0] += 1;
+    q2Values[0] -= 2;
     q2Values[1] += 2;
     q2Values[2] += 2;
     q2Values[3] -= 2;
     q2Values[4] -= 2;
   } else if (choiceThree === "b") {
-    q2Values[0] += 1;
+    q2Values[0] += 0;
     q2Values[1] += 2;
     q2Values[2] += 0;
     q2Values[3] += 1;
@@ -176,10 +215,10 @@ function questionThree() {
 function questionTwo() {
   let q1Values = questionOne();
   console.log("How do you feel about kids?");
-  console.log("a) Love them, might even have one of my own one day");
-  console.log("b) I like kids for the most part");
-  console.log("c) They annoy me a bit");
-  console.log("d) LOL fuck no");
+  console.log("a) Love them, might even have one of my own one day!");
+  console.log("b) I like kids for the most part.");
+  console.log("c) They annoy me a bit.");
+  console.log("d) LOL fuck no!");
   choiceTwo = prompt("a/b/c/d?: ").toLowerCase();
   if (choiceTwo === "a") {
     q1Values[0] += 1;
@@ -225,29 +264,29 @@ function questionOne() {
   console.log("d) I would prefer not to be in the operating room.");
   choiceOne = prompt("a/b/c/d?: ").toLowerCase();
   if (choiceOne === "a") {
-    yang1 += 2; 
-    mer1 += 1;
     alex1 += 0;
     george1 -= 2;
     izzie1 -= -1;
+    mer1 += 1;
+    yang1 += 2; 
   } else if (choiceOne === "b") {
-    yang1 += 1;
-    mer1 += 2;
     alex1 += 1;
     george1 -= 1;
     izzie1 -=1;
+    mer1 += 2;
+    yang1 += 1;
   } else if (choiceOne === "c") {
-    yang1 -= 1;
-    mer1 = mer1;
     alex1 -= 1;
     george1 += 1;
     izzie1 += 1;
+    mer1 += 1;
+    yang1 -= 1;
   } else if (choiceOne === "d") {
-    yang1 -= 2;
-    mer1 -= 2;
     alex1 -= 2;
     george1 += 2;
     izzie1 += 1;
+    mer1 -= 2;
+    yang1 -= 2;
   }
   q1Values = [alex1, george1, izzie1, mer1, yang1];
   console.log(`You chose: ${choiceOne}`)

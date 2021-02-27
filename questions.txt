@@ -4,3 +4,17 @@
 4) How do you de-stress?
 5) What's the ideal number of party guests?
 6) How good are you in bed?
+7) Do moms like you?
+
+Alex Total: 2
+George Total: 1
+Izzie Total: -1
+Meredith Total: 17
+Cristina Total: 10
+
+Instances: NetPlus/NetZero/NetMinus
+Alex Instances: 13/6/9 = +4
+George Instances: 13/2/12 = +1
+Izzie Instances: 10/7/11 = -1
+Meredith Instances: 20/2/6 = +14
+Cristina Instances: 15/4/9 = +6

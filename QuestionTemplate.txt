@@ -33,5 +33,5 @@ function question__() {
   }
   Values = [Values[0], Values[1], Values[2], Values[3], Values[4]];
   console.log(`You chose ${choice__}`);
-  return _Values;
+  return __Values;
 }
