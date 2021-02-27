@@ -1,5 +1,5 @@
 function finalAnswer() {
-  let finalValues = questionFive();
+  let finalValues = questionSix();
   if (finalValues[0] > finalValues[1] && finalValues[0] > finalValues[2] && finalValues[0] > finalValues[3] && finalValues[0] > finalValues[4]) {
     console.log("You are Alex Karev! Congratulations!");
     alert ("You are Alex Karev! Congratulations!");
@@ -15,7 +15,48 @@ function finalAnswer() {
   } else if (finalValues[4] > finalValues[1] && finalValues[4] > finalValues[2] && finalValues[4] > finalValues[3] && finalValues[4] > finalValues[0]) {
     console.log("You are Cristina Yang! Congratulations!");
     alert ("You are Cristina Yang! Congratulations!");
+  } else {
+    console.log("We couldn't decide... You share traits with all of them! Try again!");
+    alert ("We couldn't decide... You share traits with all of them! Try again!");
   }
+}
+
+function questionSix() {
+  let q5Values = questionFive();
+  console.log("How good are you in bed?");
+  console.log("a) Amazing if I think you're worth it.");
+  console.log("b) Let's just say I am a very sexually active person.");
+  console.log("c) I try.");
+  console.log("d) I'm theatrical.");
+  choiceSix = prompt("a/b/c/d: ?").toLowerCase();
+  if (choiceSix === "a") {
+    q5Values[0] += 1;
+    q5Values[1] -= 2;
+    q5Values[2] += 0;
+    q5Values[3] += 1;
+    q5Values[4] += 2;
+  } else if (choiceSix === "b") {
+    q5Values[0] += 2;
+    q5Values[1] -= 2;
+    q5Values[2] -= 1;
+    q5Values[3] += 2;
+    q5Values[4] += 2;
+  } else if (choiceSix === "c") {
+    q5Values[0] -= 2;
+    q5Values[1] += 2;
+    q5Values[2] += 1;
+    q5Values[3] += 1;
+    q5Values[4] -= 2;
+  } else if (choiceSix === "d") {
+    q5Values[0] -= 2;
+    q5Values[1] -= 2;
+    q5Values[2] += 2;
+    q5Values[3] += 0;
+    q5Values[4] += 0;
+  }
+  q6Values = [q5Values[0], q5Values[1], q5Values[2], q5Values[3], q5Values[4]];
+  console.log(`You chose ${choiceSix}`);
+  return q6Values;
 }
 
 function questionFive() {
