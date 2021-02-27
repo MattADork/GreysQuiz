@@ -13,6 +13,44 @@ function finalAnswer() {
   }
 }
 
+function questionThree() {
+  let q2Values = questionTwo();
+  console.log("How much do you are about anniversaries, birthdays, and holidays?");
+  console.log("a) They're important! Obviously!");
+  console.log("b) Sometimes they're nice, but family holidays are rough.");
+  console.log("c) I don't really care about them.");
+  console.log("d) I\'d rather be in surgery!");
+  choiceThree = prompt("a/b/c/d: ?").toLowerCase();
+  if (choiceThree === "a") {
+    q2values[0] += 1;
+    q2Values[1] += 2;
+    q2Values[2] += 2;
+    q2Values[3] -= 2;
+    q2Values[4] -= 2;
+  } else if (choiceThree === "b") {
+    q2Values[0] += 1;
+    q2Values[1] += 2;
+    q2Values[2] += 0;
+    q2Values[3] += 1;
+    q2Values[4] += 0;
+  } else if (choiceThree === "c") {
+    q2Values[0] += 2;
+    q2Values[1] += 0;
+    q2Values[2] -= 2;
+    q2Values[3] += 2;
+    q2Values[4] += 2;
+  } else if (choiceThree === "d") {
+    q2Values[0] += 1;
+    q2Values[1] -= 2;
+    q2Values[2] -= 2;
+    q2Values[3] += 1;
+    q2Values[4] += 2;
+  }
+  q3Values = [q2Values[0], q2Values[1], q2Values[2], q2Values[3], q2Values[4]];
+  console.log(`You chose ${choiceThree}`);
+  return q3Values;
+}
+
 function questionTwo() {
   let q1Values = questionOne();
   console.log("How do you feel about kids?");
