@@ -1,4 +1,4 @@
-function questionOne {
+function questionOne() {
 let yang1 = 0;
 let mer1 = 0;
 let alex1 = 0;
@@ -10,14 +10,34 @@ console.log("b) I would plead with these attendings to let me in.");
 console.log("c) I would hope for the best, whatever happens happens.");
 console.log("d) I would prefer not to be in the operating room.");
 choiceOne = prompt("a/b/c/d?: ").toLowerCase();
-if (choiceOne = "a") {
-    let yang1 += 2; 
-    let mer1 += 1;
-    let alex1 += 0;
-    let george1 -= 2;
-    let izzie1 -= -1;
-  } else if (ChoiceOne = "b") {
-    let yang1 += 1;
-    let 
+if (choiceOne === "a") {
+    yang1 += 2; 
+    mer1 += 1;
+    alex1 += 0;
+    george1 -= 2;
+    izzie1 -= -1;
+  } else if (choiceOne === "b") {
+    yang1 += 1;
+    mer1 += 2;
+    alex1 += 1;
+    george -= 1;
+    izzie -=1;
+  } else if (choiceOne === "c") {
+    yang1 -= 1;
+    mer1 = mer1;
+    alex1 -= 1;
+    george1 += 1;
+    izzie1 += 1;
+  } else if (choiceOne === "d") {
+    yang1 -= 2;
+    mer1 -= 2;
+    alex1 -= 2;
+    george1 += 2;
+    izzie1 += 1;
   }
+console.log("Yang score: " + yang1);
+console.log("Meredith score: " + mer1);
+console.log("Izzie score: " + izzie1);
+console.log("George score: " + george1);
+console.log("Alex score: " + alex1);
 }
