@@ -35,10 +35,7 @@ if (choiceOne === "a") {
     george1 += 2;
     izzie1 += 1;
   }
+q1Values = [yang1, mer1, alex1, george1, izzie1];
 console.log(`You chose: ${choiceOne}`)
-console.log("Yang score: " + yang1);
-console.log("Meredith score: " + mer1);
-console.log("Izzie score: " + izzie1);
-console.log("George score: " + george1);
-console.log("Alex score: " + alex1);
+return q1Values
 }
