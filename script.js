@@ -4,7 +4,7 @@ let mer1 = 0;
 let alex1 = 0;
 let izzie1 = 0;
 let george1 = 0;
-console.log("How fare are you willing to go to get into the operating room?");
+console.log("How far are you willing to go to get into the operating room?");
 console.log("a) I would lie, cheat, or steal to get a good surgery.");
 console.log("b) I would plead with these attendings to let me in.");
 console.log("c) I would hope for the best, whatever happens happens.");
@@ -35,6 +35,7 @@ if (choiceOne === "a") {
     george1 += 2;
     izzie1 += 1;
   }
+console.log(`You chose: ${choiceOne}`)
 console.log("Yang score: " + yang1);
 console.log("Meredith score: " + mer1);
 console.log("Izzie score: " + izzie1);
