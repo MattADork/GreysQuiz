@@ -20,8 +20,8 @@ if (choiceOne === "a") {
     yang1 += 1;
     mer1 += 2;
     alex1 += 1;
-    george -= 1;
-    izzie -=1;
+    george1 -= 1;
+    izzie1 -=1;
   } else if (choiceOne === "c") {
     yang1 -= 1;
     mer1 = mer1;
