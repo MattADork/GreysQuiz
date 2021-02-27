@@ -1,6 +1,5 @@
 function finalAnswer() {
   let finalValues = questionSeven();
-  console.log(finalValues);
   if (finalValues[0] > finalValues[1] && finalValues[0] > finalValues[2] && finalValues[0] > finalValues[3] && finalValues[0] > finalValues[4]) {
     console.log("You are Alex Karev! Congratulations!");
     alert ("You are Alex Karev! Congratulations!");
