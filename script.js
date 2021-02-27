@@ -1,16 +1,59 @@
 function finalAnswer() {
-  let finalValues = questionFour();
+  let finalValues = questionFive();
   if (finalValues[0] > finalValues[1] && finalValues[0] > finalValues[2] && finalValues[0] > finalValues[3] && finalValues[0] > finalValues[4]) {
-    alert("You are Alex Karev! Congratulations!");
+    console.log("You are Alex Karev! Congratulations!");
+    alert ("You are Alex Karev! Congratulations!");
   } else if (finalValues[1] > finalValues[0] && finalValues[1] > finalValues[2] && finalValues[1] > finalValues[3] && finalValues[1] > finalValues[4]) {
+    console.log("You are George O'Malley! Congratulations!");
     alert ("You are George O'Malley! Congratulations!");
   } else if (finalValues[2] > finalValues[1] && finalValues[2] > finalValues[0] && finalValues[2] > finalValues[3] && finalValues[2] > finalValues[4]) {
+    console.log("You are Izzie Stevens! Congratulations!");
     alert ("You are Izzie Stevens! Congratulations!");
   } else if (finalValues[3] > finalValues[1] && finalValues[3] > finalValues[2] && finalValues[3] > finalValues[0] && finalValues[3] > finalValues[4]) {
+    console.log("You are Meredith Grey! Congratulations!");
     alert ("You are Meredith Grey! Congratulations!");
   } else if (finalValues[4] > finalValues[1] && finalValues[4] > finalValues[2] && finalValues[4] > finalValues[3] && finalValues[4] > finalValues[0]) {
+    console.log("You are Cristina Yang! Congratulations!");
     alert ("You are Cristina Yang! Congratulations!");
   }
+}
+
+function questionFive() {
+  let q4Values = questionFour();
+  console.log("What's the ideal number of party guests?");
+  console.log("a) I love huge parties, the more the merrier!");
+  console.log("b) I don't mind a big party, but I prefer to know most of the people in attendance.");
+  console.log("c) Smaller is better, I like a more intimate setting.");
+  console.log("d) At no point do I ever want to be at a party.");
+  choiceFive = prompt("a/b/c/d: ?").toLowerCase();
+  if (choiceFive === "a") {
+    q4Values[0] += 1;
+    q4Values[1] -= 1;
+    q4Values[2] += 2;
+    q4Values[3] += 1;
+    q4Values[4] -= 1;
+  } else if (choiceFive === "b") {
+    q4Values[0] += 1;
+    q4Values[1] += 0;
+    q4Values[2] += 0;
+    q4Values[3] += 2;
+    q4Values[4] += 1;
+  } else if (choiceFive === "c") {
+    q4Values[0] += 0;
+    q4Values[1] += 1;
+    q4Values[2] += 0;
+    q4Values[3] += 1;
+    q4Values[4] += 2;
+  } else if (choiceFive === "d") {
+    q4Values[0] -= 1;
+    q4Values[1] += 2;
+    q4Values[2] -= 1;
+    q4Values[3] -= 1;
+    q4Values[4] += 0;
+  }
+  q5Values = [q4Values[0], q4Values[1], q4Values[2], q4Values[3], q4Values[4]];
+  console.log(`You chose ${choiceFive}`);
+  return q5Values;
 }
 
 function questionFour() {
