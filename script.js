@@ -1,5 +1,5 @@
 function finalAnswer() {
-  let finalValues = questionTwo();
+  let finalValues = questionThree();
   if (finalValues[0] > finalValues[1] && finalValues[0] > finalValues[2] && finalValues[0] > finalValues[3] && finalValues[0] > finalValues[4]) {
     alert("You are Alex Karev! Congratulations!");
   } else if (finalValues[1] > finalValues[0] && finalValues[1] > finalValues[2] && finalValues[1] > finalValues[3] && finalValues[1] > finalValues[4]) {
@@ -22,7 +22,7 @@ function questionThree() {
   console.log("d) I\'d rather be in surgery!");
   choiceThree = prompt("a/b/c/d: ?").toLowerCase();
   if (choiceThree === "a") {
-    q2values[0] += 1;
+    q2Values[0] += 1;
     q2Values[1] += 2;
     q2Values[2] += 2;
     q2Values[3] -= 2;
