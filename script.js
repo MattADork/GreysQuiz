@@ -4,6 +4,7 @@ const answerC = document.querySelector("#answer-c");
 const answerD = document.querySelector("#answer-d");
 const question = document.querySelector(".question");
 const buttons = document.querySelectorAll(".button");
+const image = document.querySelector("#character-photo")
 let alex = 0;
 let george = 0;
 let izzie = 0;
@@ -15,6 +16,76 @@ buttons.forEach((button) =>
 );
 
 function evaluate(key) {
+  if (question.textContent.includes("moms") && key.includes("a)")) {
+    evaluateQ7A();
+    chooseWinner();
+  }
+  if (question.textContent.includes("moms") && key.includes("b)")) {
+    evaluateQ7B();
+    chooseWinner();
+  }
+  if (question.textContent.includes("moms") && key.includes("c)")) {
+    evaluateQ7C();
+    chooseWinner();
+  }
+  if (question.textContent.includes("moms") && key.includes("d)")) {
+    evaluateQ7D();
+    chooseWinner();
+  }
+
+
+  if (question.textContent.includes("you in bed") && key.includes("a)")) {
+    evaluateQ6A();
+  }
+  if (question.textContent.includes("you in bed") && key.includes("b)")) {
+    evaluateQ6B();
+  }
+  if (question.textContent.includes("you in bed") && key.includes("c)")) {
+    evaluateQ6C();
+  }
+  if (question.textContent.includes("you in bed") && key.includes("d)")) {
+    evaluateQ6D();
+  }
+
+  if (question.textContent.includes("party guests") && key.includes("a)")) {
+    evaluateQ5A();
+  }
+  if (question.textContent.includes("party guests") && key.includes("b)")) {
+    evaluateQ5B();
+  }
+  if (question.textContent.includes("party guests") && key.includes("c)")) {
+    evaluateQ5C();
+  }
+  if (question.textContent.includes("party guests") && key.includes("d)")) {
+    evaluateQ5D();
+  }
+
+  if (question.textContent.includes("de-stress") && key.includes("a)")) {
+    evaluateQ4A();
+  }
+  if (question.textContent.includes("de-stress") && key.includes("b)")) {
+    evaluateQ4B();
+  }
+  if (question.textContent.includes("de-stress") && key.includes("c)")) {
+    evaluateQ4C();
+  }
+  if (question.textContent.includes("de-stress") && key.includes("d)")) {
+    evaluateQ4D();
+  }
+
+  if (question.textContent.includes("about anniversaries") && key.includes("a)")) {
+    evaluateQ3A();
+  }
+  if (question.textContent.includes("about anniversaries") && key.includes("b)")) {
+    evaluateQ3B();
+  }
+  if (question.textContent.includes("about anniversaries") && key.includes("c)")) {
+    evaluateQ3C();
+  }
+  if (question.textContent.includes("about anniversaries") && key.includes("d)")) {
+    evaluateQ3D();
+  }
+  
   if (question.textContent.includes("feel about kids") && key.includes("a)")) {
     evaluateQ2A();
   }
@@ -43,6 +114,137 @@ function evaluate(key) {
 
 }
 
+function evaluateQ6A() {
+  alex += 1;
+  george -= 2;
+  izzie += 0;
+  meredith += 1;
+  yang += 2;
+  printQuestion7();
+}
+function evaluateQ6B() {
+  alex += 2;
+  george -= 2;
+  izzie -= 1;
+  meredith += 2;
+  yang += 2;
+  printQuestion7();
+}
+function evaluateQ6C() {
+  alex -= 2;
+  george += 2;
+  izzie += 1;
+  meredith += 1;
+  yang -= 2;
+  printQuestion7();
+}
+function evaluateQ6D() {
+  alex -= 2;
+  george -= 2;
+  izzie += 2;
+  meredith += 0;
+  yang += 0;
+  printQuestion7();
+}
+
+function evaluateQ5A() {
+  alex += 1;
+  george -= 1;
+  izzie += 2;
+  meredith += 1;
+  yang -= 1;
+  printQuestion6();
+}
+function evaluateQ5B() {
+  alex += 1;
+  george += 0;
+  izzie += 0;
+  meredith += 2;
+  yang += 1;
+  printQuestion6();
+}
+function evaluateQ5C() {
+  alex += 0;
+  george += 1;
+  izzie += 0;
+  meredith += 1;
+  yang += 2;
+  printQuestion6();
+}
+function evaluateQ5D() {
+  alex -= 1;
+  george += 2;
+  izzie -= 1;
+  meredith -= 1;
+  yang += 0;
+  printQuestion6();
+}
+
+function evaluateQ4A() {
+  alex -= 2;
+  george -= 2;
+  izzie += 0;
+  meredith += 1 ;
+  yang += 2;
+  printQuestion5();
+}
+function evaluateQ4B() {
+  alex += 2;
+  george -= 2;
+  izzie -= 1;
+  meredith += 0;
+  yang += 1;
+  printQuestion5();
+}
+function evaluateQ4C() {
+  alex += 0;
+  george += 1;
+  izzie += 2;
+  meredith -= 2;
+  yang -= 1;
+  printQuestion5();
+}
+function evaluateQ4D() {
+  alex += 1;
+  george += 2;
+  izzie += 0;
+  meredith += 2;
+  yang += 1;
+  printQuestion5();
+}
+
+function evaluateQ3A() {
+  alex += -2;
+  george += 2;
+  izzie += 2;
+  meredith -= 2;
+  yang -= 2;
+  printQuestion4();
+}
+function evaluateQ3B() {
+  alex += 0;
+  george += 2;
+  izzie += 0;
+  meredith += 0;
+  yang -= 1;
+  printQuestion4();
+}
+function evaluateQ3C() {
+  alex += 2;
+  george -= 0;
+  izzie -= 2;
+  meredith += 1;
+  yang += 2;
+  printQuestion4();
+}
+function evaluateQ3D() {
+  alex += 1;
+  george -= 2;
+  izzie -= 2;
+  meredith += 1;
+  yang += 2;
+  printQuestion4();
+}
 
 function evaluateQ2A() {
   alex += 0;
@@ -126,3 +328,85 @@ function printQuestion3() {
   question.textContent = "How much do you are about anniversaries, birthdays, and holidays?";
 }
 
+function printQuestion4() {
+  answerA.textContent = "a) Dancing";
+  answerB.textContent = "b) Fucking";
+  answerC.textContent = "c) Eating";
+  answerD.textContent = "d) Drinking";
+  question.textContent = "How do you de-stress?";
+}
+
+function printQuestion5() {
+  answerA.textContent = "a) I love huge parties, the more the merrier!";
+  answerB.textContent = "b) I don't mind a big party, but I prefer to know most of the people in attendance.";
+  answerC.textContent = "c) Smaller is better, I like a more intimate setting.";
+  answerD.textContent = "d) At no point do I ever want to be at a party.";
+  question.textContent = "What's the ideal number of party guests?";
+}
+
+function printQuestion6() {
+  answerA.textContent = "a) Amazing if I think you're worth it.";
+  answerB.textContent = "b) Let's just say I am a very sexually active person.";
+  answerC.textContent = "c) I try.";
+  answerD.textContent = "d) I'm theatrical.";
+  question.textContent = "How good are you in bed?";
+}
+
+function printQuestion7() {
+  answerA.textContent = "a) Always.";
+  answerB.textContent = "b) I can put on a good song and dance.";
+  answerC.textContent = "c) I try to avoid parents.";
+  answerD.textContent = "d) Parents tend to dislike me on first impression.";
+  question.textContent = "Do moms like you?";
+}
+
+
+
+
+
+
+function chooseWinner() {
+  if (alex > george && alex > izzie && alex > meredith && alex > yang) {
+    answerA.textContent = "";
+    answerB.textContent = "";
+    answerC.textContent = "";
+    answerD.textContent = "";
+    question.textContent = "Congratulations! You're Alex Karev!";
+    image.src="";
+  } else if (george > alex && george > izzie && george > meredith && george > yang) {
+    answerA.textContent = "";
+    answerB.textContent = "";
+    answerC.textContent = "";
+    answerD.textContent = "";
+    question.textContent = "Congratulations! You're George O'Malley!";
+    image.src="";
+  } else if (izzie > george && izzie > alex && izzie > meredith && izzie > yang) {
+    answerA.textContent = "";
+    answerB.textContent = "";
+    answerC.textContent = "";
+    answerD.textContent = "";
+    question.textContent = "Congratulations! You're Izzie Stevens!";
+    image.src="";
+  } else if (meredith > george && meredith > izzie && meredith > alex && meredith > yang) {
+    answerA.textContent = "";
+    answerB.textContent = "";
+    answerC.textContent = "";
+    answerD.textContent = "";
+    question.textContent = "Congratulations! You're Meredith Grey!";
+    image.src="";
+  } else if (yang > george && yang > izzie && yang > meredith && yang > alex) {
+    answerA.textContent = "";
+    answerB.textContent = "";
+    answerC.textContent = "";
+    answerD.textContent = "";
+    question.textContent = "Congratulations! You're Cristina Yang!";
+    image.src="";
+  } else {
+    answerA.textContent = "";
+    answerB.textContent = "";
+    answerC.textContent = "";
+    answerD.textContent = "";
+    question.textContent = "Sorry, you're too similar to more than one character!";
+    image.src="";
+  }
+}

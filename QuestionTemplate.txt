@@ -1,37 +1,59 @@
-function question__() {
-  let Values = question__();
-  console.log("Question");
-  console.log("a) ");
-  console.log("b) ");
-  console.log("c) ");
-  console.log("d) ");
-  choice__ = prompt("a/b/c/d: ?").toLowerCase();
-  if (choice__ === "a") {
-    Values[0] ;
-    Values[1] ;
-    Values[2] ;
-    Values[3] ;
-    Values[4] ;
-  } else if (choice__ === "b") {
-    Values[0] ;
-    Values[1] ;
-    Values[2] ;
-    Values[3] ;
-    Values[4] ;
-  } else if (choice__ === "c") {
-    Values[0] ;
-    Values[1] ;
-    Values[2] ;
-    Values[3] ;
-    Values[4] ;
-  } else if (choice__ === "d") {
-    Values[0] ;
-    Values[1] ;
-    Values[2] ;
-    Values[3] ;
-    Values[4] ;
-  }
-  Values = [Values[0], Values[1], Values[2], Values[3], Values[4]];
-  console.log(`You chose ${choice__}`);
-  return __Values;
+function evaluateQ_A() {
+  alex ;
+  george ;
+  izzie ;
+  meredith ;
+  yang ;
+  printQuestion_();
 }
+function evaluateQ_B() {
+  alex ;
+  george ;
+  izzie ;
+  meredith ;
+  yang ;
+  printQuestion_();
+}
+function evaluateQ_C() {
+  alex ;
+  george ;
+  izzie ;
+  meredith ;
+  yang ;
+  printQuestion_();
+}
+function evaluateQ_D() {
+  alex ;
+  george ;
+  izzie ;
+  meredith ;
+  yang ;
+  printQuestion_();
+}
+
+  if (question.textContent.includes("") && key.includes("a)")) {
+    evaluateQ_A();
+  }
+  if (question.textContent.includes("") && key.includes("b)")) {
+    evaluateQ_B();
+  }
+  if (question.textContent.includes("") && key.includes("c)")) {
+    evaluateQ_C();
+  }
+  if (question.textContent.includes("") && key.includes("d)")) {
+    evaluateQ_D();
+  }
+
+  function printQuestion_() {
+  answerA.textContent = "";
+  answerB.textContent = "";
+  answerC.textContent = "";
+  answerD.textContent = "";
+  question.textContent = "";
+}
+
+console.log(alex);
+console.log(george);
+console.log(izzie);
+console.log(meredith);
+console.log(yang);
