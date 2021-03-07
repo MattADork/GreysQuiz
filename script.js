@@ -114,6 +114,39 @@ function evaluate(key) {
 
 }
 
+function evaluateQ7A() {
+  alex -= 2;
+  george += 2;
+  izzie += 2;
+  meredith -= 2;
+  yang -= 2;
+  //printQuestion_();
+}
+function evaluateQ7B() {
+  alex += 1;
+  george += 2;
+  izzie += 1;
+  meredith += 1;
+  yang += 0;
+  //printQuestion_();
+}
+function evaluateQ7C() {
+  alex += 0;
+  george -= 1;
+  izzie -= 2;
+  meredith += 1;
+  yang += 2;
+  //printQuestion_();
+}
+function evaluateQ7D() {
+  alex += 1;
+  george -= 2;
+  izzie -= 2;
+  meredith += 1;
+  yang += 2;
+  //printQuestion_();
+}
+
 function evaluateQ6A() {
   alex += 1;
   george -= 2;
@@ -372,35 +405,35 @@ function chooseWinner() {
     answerC.textContent = "";
     answerD.textContent = "";
     question.textContent = "Congratulations! You're Alex Karev!";
-    image.src="";
+    image.src="https://upload.wikimedia.org/wikipedia/en/f/f3/Dr._Alex_Karev.jpg";
   } else if (george > alex && george > izzie && george > meredith && george > yang) {
     answerA.textContent = "";
     answerB.textContent = "";
     answerC.textContent = "";
     answerD.textContent = "";
     question.textContent = "Congratulations! You're George O'Malley!";
-    image.src="";
+    image.src="https://s.yimg.com/ny/api/res/1.2/W1BLOtE.o55C9hoOJxePCQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTg1My4zMzMzMzMzMzMzMzM0/https://s.yimg.com/uu/api/res/1.2/VrA5XJnvwnJIZn9iXFeeFw--~B/aD01ODA7dz00MzU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/people_218/bec904a12237eb612cc13374db6d6774";
   } else if (izzie > george && izzie > alex && izzie > meredith && izzie > yang) {
     answerA.textContent = "";
     answerB.textContent = "";
     answerC.textContent = "";
     answerD.textContent = "";
     question.textContent = "Congratulations! You're Izzie Stevens!";
-    image.src="";
+    image.src="https://upload.wikimedia.org/wikipedia/en/9/94/Dr._Isobel_Stevens.jpg";
   } else if (meredith > george && meredith > izzie && meredith > alex && meredith > yang) {
     answerA.textContent = "";
     answerB.textContent = "";
     answerC.textContent = "";
     answerD.textContent = "";
     question.textContent = "Congratulations! You're Meredith Grey!";
-    image.src="";
+    image.src="https://i.pinimg.com/474x/92/a9/94/92a994c4f58ce56a87ab94635940bf96.jpg";
   } else if (yang > george && yang > izzie && yang > meredith && yang > alex) {
     answerA.textContent = "";
     answerB.textContent = "";
     answerC.textContent = "";
     answerD.textContent = "";
     question.textContent = "Congratulations! You're Cristina Yang!";
-    image.src="";
+    image.src="https://pyxis.nymag.com/v1/imgs/5c5/681/bab25750a3a1c8afe39be7ce6e51f22ea8-23-greys1.jpg";
   } else {
     answerA.textContent = "";
     answerB.textContent = "";
